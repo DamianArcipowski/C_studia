@@ -1,23 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    printf("Wprowadz wyraz a1: \n");
-    int a1;
-    scanf("%d", &a1);
-
     printf("Wprowadz ilosc elementow do wczytania: \n");
     int amount, temp;
     scanf("%d", &amount);
 
-    a1 *= a1;
+    int result = 0;
 
-    for (int i = 2; i < amount + 2; i++) {
+    for (int i = 1; i < amount + 1; i++) {
         printf("Wprowadz wyraz a%d: \n", i);
         scanf("%d", &temp);
-        a1 += (temp * temp);
+        result += (temp * temp);
     }
 
-    printf("%d", a1);
+    printf("%d", result);
 
     return 0;
 }

@@ -5,15 +5,18 @@ int main() {
     int amount, temp;
     scanf("%d", &amount);
 
-    int result = 1;
+    int positiveOdds = 0;
 
     for (int i = 1; i < amount + 1; i++) {
-        printf("Wprowadz wyraz a%d: \n", i);
+        printf("Wprowadz liczbe nr. %d: \n", i);
         scanf("%d", &temp);
-        result *= temp;
+
+        if (temp % 2 == 1 && temp > 0) {
+            positiveOdds++;
+        }
     }
 
-    printf("%d", result);
+    printf("Nieparzyste i nieujemne: %d\n", positiveOdds);
 
     return 0;
 }

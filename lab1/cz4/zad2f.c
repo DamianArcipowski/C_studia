@@ -5,20 +5,18 @@ int main() {
     int amount, temp;
     scanf("%d", &amount);
 
-    int result = 0;
+    int evensWithOddNumber = 0;
 
     for (int i = 1; i < amount + 1; i++) {
-        printf("Wprowadz wyraz a%d: \n", i);
+        printf("Wprowadz liczbe nr. %d: \n", i);
         scanf("%d", &temp);
-        
-        if (temp < 0) {
-            result += (temp * -1);
-        } else {
-            result += temp;
+
+        if (i % 2 == 1 && temp % 2 == 0) {
+            evensWithOddNumber++;
         }
     }
 
-    printf("%d", result);
+    printf("Nieparzysty numer i parzyste: %d\n", evensWithOddNumber);
 
     return 0;
 }

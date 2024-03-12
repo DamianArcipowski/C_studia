@@ -2,32 +2,25 @@
 #include <math.h>
 
 int main() {
-    printf("Wprowadz wyraz a1: \n");
-    int a1;
-    scanf("%d", &a1);
-
     printf("Wprowadz ilosc elementow do wczytania: \n");
-    int amount, temp;
+    int amount;
+    float temp;
     scanf("%d", &amount);
 
-    if (a1 < 0) {
-        a1 *= -1;
-    }
+    float result = 0;
 
-    a1 = sqrt(a1);
-
-    for (int i = 2; i < amount + 2; i++) {
+    for (int i = 1; i < amount + 1; i++) {
         printf("Wprowadz wyraz a%d: \n", i);
-        scanf("%d", &temp);
+        scanf("%f", &temp);
         
         if (temp < 0) {
-            a1 += sqrt((temp * -1));
+            result += sqrt((temp * -1));
         } else {
-            a1 += sqrt(temp);
+            result += sqrt(temp);
         }
     }
 
-    printf("%d", a1);
+    printf("%.2f", result);
 
     return 0;
 }

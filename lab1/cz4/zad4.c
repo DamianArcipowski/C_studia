@@ -5,18 +5,26 @@ int main() {
     int amount, temp;
     scanf("%d", &amount);
 
-    int num = 0;
+    int zeros = 0;
+    int negatives = 0;
+    int positives = 0;
 
     for (int i = 1; i < amount + 1; i++) {
         printf("Wprowadz liczbe nr. %d: \n", i);
         scanf("%d", &temp);
 
         if (temp > 0) {
-            num += temp;
+            positives++;
+        } else if (temp == 0) {
+            zeros++;
+        } else {
+            negatives++;
         }
     }
 
-    printf("%d", num * 2);
+    printf("Dodatnie: %d\n", positives);
+    printf("Zera: %d\n", zeros);
+    printf("Ujemne: %d", negatives);
 
     return 0;
 }

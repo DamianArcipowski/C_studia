@@ -5,15 +5,18 @@ int main() {
     int amount, temp;
     scanf("%d", &amount);
 
-    int result = 1;
-
+    int divisible = 0;
+    
     for (int i = 1; i < amount + 1; i++) {
-        printf("Wprowadz wyraz a%d: \n", i);
+        printf("Wprowadz liczbe nr. %d: \n", i);
         scanf("%d", &temp);
-        result *= temp;
+
+        if (temp % 3 == 0 && temp % 5 != 0) {
+            divisible++;
+        }
     }
 
-    printf("%d", result);
+    printf("Podzielne przez 3 i niepodzielne przez 5: %d\n", divisible);
 
     return 0;
 }
