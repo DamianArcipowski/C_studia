@@ -19,7 +19,7 @@ int howManyLetters(int n) {
     int counter = 0;
 
     while (n) {
-        temp = n % 10;
+        int temp = n % 10;
         n /= 10;
         counter++;
     }
@@ -33,8 +33,8 @@ int main() {
     printf("Wprowadz liczbe: \n");
     scanf("%d", &n);
 
-    printf("Pierwsza cyfra: %d", firstNumber(n));
-    printf("Ostatnia cyfra: %d", lastNumber(n));
+    printf("Pierwsza cyfra: %d\n", firstNumber(n));
+    printf("Ostatnia cyfra: %d\n", lastNumber(n));
     printf("Ilosc cyfr: %d", howManyLetters(n));
 
     return 0;

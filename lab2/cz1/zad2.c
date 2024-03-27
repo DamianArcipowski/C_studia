@@ -17,9 +17,11 @@ double average(double x, double y, double z) {
 }
 
 double power(double x, int n) {
+    if (n == 0) return 1;
+
     double result = x;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n - 1; i++) {
         result *= x;
     }
 

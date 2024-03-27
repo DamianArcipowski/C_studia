@@ -2,7 +2,7 @@
 #include <math.h>
 
 double accountStatus(double balance, double rate, int years) {
-    return balance * pow(1 + rate / (100 * balance), years);
+    return balance * pow(1 + rate / 100, years);
 }
 
 int main() {
@@ -18,7 +18,7 @@ int main() {
     printf("Podaj dlugosc okresu oszczedzania w latach: \n");
     scanf("%d", &years);
 
-    printf("Kapital wyniesie %lf po %d latach oszczedzania", accountStatus(balance, rate, years), years);
+    printf("Kapital wyniesie %.2f po %d latach oszczedzania", accountStatus(balance, rate, years), years);
 
     return 0;
 }
