@@ -2,13 +2,15 @@
 
 void swapValues(int *a, int *b) {
     int temp = *a;
-    *a = *b;
-    *b = temp;
+    if (*a > *b) {
+        *a = *b;
+        *b = temp;
+    }
 }
 
 int main() {
-    int a = 8;
-    int b = 6;
+    int a = 2;
+    int b = 10;
 
     printf("Przed zamianą: \nA: %d, B: %d\n", a, b);
 
